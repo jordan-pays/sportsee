@@ -1,0 +1,42 @@
+.container_info_comp {
+    flex: 1 ;
+    height: 124px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_info {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    margin-right: 24px;
+}
+
+.value_info_comp {
+    color: #282D30;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.label_info_comp {
+    color: #74798C;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0px;
+}
+
+@media (min-width : 1330px) {
+    .container_info_comp{
+        width: 258px; 
+    }
+}

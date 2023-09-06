@@ -1,0 +1,42 @@
+
+.pie_chart {
+    border-radius: 5px;
+    background: #FBFBFB;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+
+.pie_chart_score_legend {
+    color: #282D30;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px;
+    text-align: center;
+}
+
+.pie_chart_text_legend {
+    color: #74798C;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0px;
+    text-align: center;
+}
+
+.pie_chart_legend {
+    width: 95px;
+    position: absolute;
+    top: 90px;
+    left: 75px;
+}
+
+.pie_chart_score {
+    color: #20253A;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+}

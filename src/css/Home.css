@@ -1,0 +1,75 @@
+.container_home {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 115px 10px 20px 40px;   
+}
+
+.home_title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.home_name {
+    color: #FF0101;
+    font-family: Roboto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.home_congratule {
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 41px;
+    margin-bottom: 77px;
+}
+
+.home_container_all_info {
+    display: flex;
+    flex: 1;
+    gap: 31px;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.home_container_all_charts {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.home_container_specific_info {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 39px;
+    align-items: flex-end;
+}
+
+.home_container_specific_charts {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+}
+
+@media (min-width : 1220px) {
+    .home_container_specific_info{
+        flex-direction: column; 
+    }
+}
+
+@media (min-width : 1410px) {
+    .container_home{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}

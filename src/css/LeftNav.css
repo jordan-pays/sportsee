@@ -1,0 +1,27 @@
+.left_naf_container {
+    width: 117px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #020203;
+    justify-content: space-between;
+    padding: 60px 0px;
+}
+
+.left_naf_container_icon {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.left_nav_copyryght {
+    color: #FFF;
+    font-family: Roboto;
+    width: 140px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    transform: rotate(-90deg);
+}
