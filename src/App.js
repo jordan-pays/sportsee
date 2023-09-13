@@ -8,11 +8,10 @@ function App() {
   return (
     <>
       <Header />
-      <view className='container_app'>
+      <div className='container_app'>
         <LeftNav />
         <Router />
-      </view>
-
+      </div>
     </>
   );
 }
