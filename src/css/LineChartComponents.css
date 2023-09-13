@@ -79,3 +79,7 @@
     z-index: -10;
     background-color: #ff0000;
   }
+
+.recharts-tooltip-cursor {
+    display: none !important;
+}

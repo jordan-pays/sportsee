@@ -11,7 +11,7 @@ export default function RadarChartComponents(props) {
 		const { x, y, payload } = props
 		return (
 			<g>
-				<text x={x} y={y} dx={Math.abs(payload.coordinate) <= 90 ? -15 : -30} dy={payload.coordinate == -90 ? 5 : payload.coordinate == -30 ? 10 : -5} fill='#FFF' className='radar_chart_kinds'>
+				<text x={x} y={y} dx={Math.abs(payload.coordinate) == 90 ? -20 : Math.abs(payload.coordinate) < 90 ? -25 : -30} dy={payload.coordinate == -90 ? 5 : payload.coordinate == -30 ? 15 : payload.coordinate == 90 ? -5 : -10} fill='#FFF' className='radar_chart_kinds'>
 					{kind[payload.value]}
 				</text>
 			</g>
@@ -19,8 +19,8 @@ export default function RadarChartComponents(props) {
 	}
 
 	function recupData() {
-		UserService.getPerformance(id).then((res)=>{
-			if(res.status == 200){
+		UserService.getPerformance(id).then((res) => {
+			if (res.status == 200) {
 				setKind(res.data.data.kind)
 				setData(res.data.data.data)
 			}

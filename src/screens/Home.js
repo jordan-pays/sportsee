@@ -18,10 +18,10 @@ export default function Home() {
     UserService.getMainData(id).then((res) => {
       if (res.status == 200) {
         setMainData(res.data.data)
-      }else{
+      } else {
         window.location.href = "/error"
       }
-    }).catch(()=>{
+    }).catch(() => {
       window.location.href = "/error"
     })
   }
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         <div className='home_container_specific_info'>
           {mainData?.keyData?.calorieCount &&
-            <InfoComponents values={mainData.keyData.calorieCount} type={"cal"} />
+            <InfoComponents values={(mainData.keyData.calorieCount / 1000).toFixed(3).replace(".",",")} type={"cal"} />
           }
           {mainData?.keyData?.proteinCount &&
             <InfoComponents values={mainData.keyData.proteinCount} type={"prot"} />

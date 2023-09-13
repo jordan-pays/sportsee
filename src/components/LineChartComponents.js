@@ -19,17 +19,17 @@ export default function LineChartComponents(props) {
     );
   }
 
-   const CustomCursor = (x) => {
+  const CustomCursor = (x) => {
     const r = document.querySelector(":root");
-    if(ref.current?.offsetWidth){
+    if (ref.current?.offsetWidth) {
       r.style.setProperty("--width-r", `${ref.current.offsetWidth - x}px`);
     }
-    
+
   };
 
   const onMouseMove = () => {
     const r = document.querySelector(":root");
-    r.style.setProperty("--opacity-r", 0.5);
+    r.style.setProperty("--opacity-r", 0.0975);
   };
 
   const onMouseLeave = () => {
