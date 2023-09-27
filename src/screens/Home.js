@@ -16,13 +16,7 @@ export default function Home() {
 
   function recupData() {
     UserService.getMainData(id).then((res) => {
-      if (res.status == 200) {
-        setMainData(res.data.data)
-      } else {
-        window.location.href = "/error"
-      }
-    }).catch(() => {
-      window.location.href = "/error"
+      setMainData(res.user)
     })
   }
 
@@ -34,7 +28,7 @@ export default function Home() {
   return (
     mainData &&
     <div className='container_home'>
-      <p className='home_title'>Bonjour <span className='home_name'>{mainData?.userInfos.firstName}</span></p>
+      <p className='home_title'>Bonjour <span className='home_name'>{mainData?.firstName}</span></p>
       <p className='home_congratule'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       <div className='home_container_all_info'>
         <div className='home_container_all_charts'>
@@ -46,17 +40,17 @@ export default function Home() {
           </div>
         </div>
         <div className='home_container_specific_info'>
-          {mainData?.keyData?.calorieCount &&
-            <InfoComponents values={(mainData.keyData.calorieCount / 1000).toFixed(3).replace(".",",")} type={"cal"} />
+          {mainData?.calorieCount &&
+            <InfoComponents values={mainData.calorieCount} type={"cal"} />
           }
-          {mainData?.keyData?.proteinCount &&
-            <InfoComponents values={mainData.keyData.proteinCount} type={"prot"} />
+          {mainData?.proteinCount &&
+            <InfoComponents values={mainData.proteinCount} type={"prot"} />
           }
-          {mainData?.keyData?.carbohydrateCount &&
-            <InfoComponents values={mainData.keyData.carbohydrateCount} type={"glu"} />
+          {mainData?.carbohydrateCount &&
+            <InfoComponents values={mainData.carbohydrateCount} type={"glu"} />
           }
-          {mainData?.keyData?.lipidCount &&
-            <InfoComponents values={mainData.keyData.lipidCount} type={"lip"} />
+          {mainData?.lipidCount &&
+            <InfoComponents values={mainData.lipidCount} type={"lip"} />
           }
         </div>
       </div>

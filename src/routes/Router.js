@@ -8,6 +8,7 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path='home/:id' element={<Home />} />
+                <Route path='/error/:code_error' element={<Error />} />
                 <Route path='*' element={<Error />} />
             </Routes>
         </BrowserRouter>
